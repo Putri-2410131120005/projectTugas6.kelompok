@@ -1,0 +1,41 @@
+.option-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 8px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .option-button.selected {
+    border: 3px solid black;
+  }
+  
+  .option-button.sangat-setuju {
+    background-color: #2e7d32; /* Hijau tua */
+  }
+  
+  .option-button.setuju {
+    background-color: #66bb6a; /* Hijau muda */
+  }
+  
+  .option-button.netral {
+    background-color: #fdd835; /* Kuning */
+  }
+  
+  .option-button.tidak-setuju {
+    background-color: #fb8c00; /* Oranye */
+  }
+  
+  .option-button.sangat-tidak-setuju {
+    background-color: #e53935; /* Merah */
+  }
+  
+  .keterangan-warna {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
