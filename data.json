@@ -1,67 +1,144 @@
-[
+{
+  "Pernyataan": [
     {
-      "type": "ISTJ – Si Tanggung Jawab",
-      "caption": "Kamu itu orangnya rapi dan bisa banget diandalkan lohh. Suka hal-hal yang teratur dan nyaman kalau semuanya berjalan sesuai rencana."
+      "question": "1. Saya merasa lebih energik dan bersemangat ketika berada di keramaian.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Extrovert",
+      "positive": "Extrovert",
+      "negative": "Introvert"
     },
     {
-      "type": "ISFJ  – Si Penjaga",
-      "caption": "Kamu itu tipe yang sabar dan perhatian banget. Diam-diam suka bantuin orang dan jarang minta pujian."
+      "question": "2. Saya lebih suka menghabiskan waktu sendiri di rumah daripada menghadiri acara sosial.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Introvert",
+      "positive": "Introvert",
+      "negative": "Extrovert"
     },
     {
-      "type": "INFJ – Si Visioner",
-      "caption": "Kamu itu pendiam tapi punya pemikiran yang dalam. Peduli banget sama orang lain dan suka cari makna dari hal-hal kecil."
+      "question": "3. Saya merasa lebih mudah beradaptasi dalam situasi sosial baru dan bertemu orang baru.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Extrovert",
+      "positive": "Extrovert",
+      "negative": "Introvert"
     },
     {
-      "type": "INTJ – Si Perencan Strategis",
-      "caption": "Kamu itu punya visi jelas dan suka mikir jauh ke depan lohh. Gak masalah kerja sendiri, asal semua sesuai rencana."
+      "question": "4. Saya merasa nyaman berbicara dengan orang asing dan memperkenalkan diri dalam situasi baru.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Extrovert",
+      "positive": "Extrovert",
+      "negative": "Introvert"
     },
     {
-      "type": "ISTP – Si Pemecah Masalah",
-      "caption": "Kamu itu santai tapi jago banget kalau ada masalah. Suka nyoba hal baru dan tenang banget dalam situasi genting."
+      "question": "5. Saya lebih suka berpikir dan merencanakan sesuatu sendirian sebelum berbicara dengan orang lain.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Introvert",
+      "positive": "Introvert",
+      "negative": "Extrovert"
     },
     {
-      "type": "ISFP – Si Seniman",
-      "caption": "Kamu itu lembut dan artistik. Lebih suka menikmati hidup dengan tenang dan mengekspresikan diri lewat tindakan."
+      "question": "6. Saya lebih percaya pada informasi konkret yang bisa saya lihat dan rasakan langsung.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Sensing",
+      "positive": "Sensing",
+      "negative": "Intuition"
     },
     {
-      "type": "INFP – Si Idealistis",
-      "caption": "Kamu itu punya hati yang hangat dan imajinasi yang luas. Nilai-nilaimu kuat banget, dan kamu selalu ingin bikin dunia jadi lebih baik."
+      "question": "7. Saya sering memikirkan kemungkinan dan ide-ide besar daripada fokus pada kenyataan saat ini.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Intuition",
+      "positive": "Intuition",
+      "negative": "Sensing"
     },
     {
-      "type": "INTP – Si Pemikir Logis",
-      "caption": "Kamu itu penasaran banget sama banyak hal. Suka mikir yang rumit-rumit dan lebih nyaman sama logika daripada drama."
+      "question": "8. Saya lebih suka mengikuti instruksi dan prosedur yang sudah terbukti berhasil.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Sensing",
+      "positive": "Sensing",
+      "negative": "Intuition"
     },
     {
-      "type": "ESTP – Si Petualang",
-      "caption": "Kamu itu spontan dan suka tantangan. Hidupmu penuh aksi, dan kamu jago banget ambil keputusan cepat."
+      "question": "9. Saya lebih tertarik pada makna tersembunyi dan pola di balik suatu peristiwa.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Intuition",
+      "positive": "Intuition",
+      "negative": "Sensing"
     },
     {
-      "type": "ESFP – Si Penghibur",
-      "caption": "Kamu itu ceria dan gampang banget bikin suasana rame. Suka banget hidup di momen sekarang dan nyebarin energi positif."
+      "question": "10. Saya merasa lebih nyaman dengan fakta dan detail daripada teori dan spekulasi.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Sensing",
+      "positive": "Sensing",
+      "negative": "Intuition"
     },
     {
-      "type": "ENFP – Si Inspirator",
-      "caption": "Kamu itu penuh ide dan semangat! Gak suka rutinitas, dan selalu punya cara seru buat ngejar mimpi."
+      "question": "11. Saya lebih memilih membuat keputusan berdasarkan logika dan analisis daripada mempertimbangkan perasaan orang lain.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Thinking",
+      "positive": "Thinking",
+      "negative": "Feeling"
     },
     {
-      "type": "ENTP – Si Debater",
-      "caption": "Kamu itu suka debat seru dan punya banyak ide out-of-the-box. Jago banget mikir kreatif dan lihat segala hal dari sisi unik."
+      "question": "12. Saya merasa lebih nyaman menyampaikan kebenaran meskipun itu bisa menyakitkan perasaan orang lain.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Thinking",
+      "positive": "Thinking",
+      "negative": "Feeling"
     },
     {
-      "type": "ESTJ – Si Pemimpin Tangguh",
-      "caption": "Kamu itu tegas dan suka hal-hal yang tertata. Bisa diandalkan buat mimpin dan pastiin semuanya jalan sesuai aturan."
+      "question": "13. Saya sering mempertimbangkan dampak emosional keputusan saya terhadap orang lain sebelum mengambil tindakan.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Feeling",
+      "positive": "Feeling",
+      "negative": "Thinking"
     },
     {
-      "type": "ESFJ – Si Pengasuh",
-      "caption": "Kamu itu perhatian dan hangat. Suka banget bikin orang lain nyaman dan selalu peduli sama suasana sekitar."
+      "question": "14. Dalam bekerja, saya lebih menghargai keadilan dan objektivitas daripada keharmonisan dan perasaan.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Thinking",
+      "positive": "Thinking",
+      "negative": "Feeling"
     },
     {
-      "type": "ENFJ – Si Motivator",
-      "caption": "Kamu itu karismatik dan peka banget sama orang lain. Gak cuma bisa nyemangatin, tapi juga bikin orang merasa dimengerti."
+      "question": "15. Saya cenderung membuat keputusan dengan hati daripada dengan kepala.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Feeling",
+      "positive": "Feeling",
+      "negative": "Thinking"
     },
     {
-      "type": "ENTJ – Si Komandan",
-      "caption": "Kamu itu percaya diri dan punya tujuan yang jelas. Jago banget mimpin dan ngajak orang lain maju bareng."
+      "question": "16. Saya merasa lebih tenang ketika semua hal direncanakan dan terjadwal dengan rapi.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Judging",
+      "positive": "Judging",
+      "negative": "Perceiving"
+    },
+    {
+      "question": "17. Saya sering membiarkan rencana berkembang secara alami daripada menetapkan keputusan sejak awal.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Perceiving",
+      "positive": "Perceiving",
+      "negative": "Judging"
+    },
+    {
+      "question": "18. Saya cenderung menyelesaikan tugas jauh sebelum batas waktu yang ditentukan.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Judging",
+      "positive": "Judging",
+      "negative": "Perceiving"
+    },
+    {
+      "question": "19. Saya lebih nyaman beradaptasi dengan perubahan daripada mengikuti jadwal tetap.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Perceiving",
+      "positive": "Perceiving",
+      "negative": "Judging"
+    },
+    {
+      "question": "20. Saya lebih suka keputusan yang final daripada menunda-nunda dan mengeksplorasi kemungkinan lain.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Judging",
+      "positive": "Judging",
+      "negative": "Perceiving"
     }
-]
-  
+  ]
+}
