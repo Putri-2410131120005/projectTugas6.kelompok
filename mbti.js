@@ -32,18 +32,6 @@ fetch('data.json')
       const question = data.Pernyataan[index];
       questionsContainer.innerHTML = ""; // Bersihkan kontainer
 
-      const keterangan = document.createElement('div');
-      keterangan.className = "keterangan-warna";
-      keterangan.innerHTML = `
-      <span class="option-button sangat-setuju" title="Sangat Setuju"></span>
-      <span class="option-button setuju" title="Setuju"></span>
-      <span class="option-button netral" title="Netral"></span>
-      <span class="option-button tidak-setuju" title="Tidak Setuju"></span>
-      <span class="option-button sangat-tidak-setuju" title="Sangat Tidak Setuju"></span>
-      `;
-      questionsContainer.appendChild(keterangan);
-
-
       const questionText = document.createElement('p');
       questionText.className = 'question-text';
       questionText.textContent = question.question;
@@ -51,11 +39,21 @@ fetch('data.json')
 
       question.pilihan.forEach(option => {
         const button = document.createElement('button');
-        button.textContent = option;
+        
+        // Jangan tampilkan teks
+        // button.textContent = option;
+
+        // Tambahkan class warna
         button.className = `option-button ${option.toLowerCase().replace(/\s+/g, "-")}`;
+
+        // Tetap gunakan dataset untuk logika pemrosesan
         button.dataset.question = `question_${index}`;
         button.dataset.value = option;
 
+        // Tambahkan tooltip untuk info saat hover
+        button.title = option;
+
+        // Event klik
         button.addEventListener('click', () => {
           document.querySelectorAll(`button[data-question="question_${index}"]`)
             .forEach(btn => btn.classList.remove('selected'));
@@ -65,7 +63,7 @@ fetch('data.json')
         questionsContainer.appendChild(button);
       });
     }
-
+    
     nextButton.addEventListener('click', function(event) {
       event.preventDefault();
 
@@ -98,6 +96,11 @@ fetch('data.json')
             "J/P": scores["Judging"] > scores["Perceiving"] ? "J" : "P"
           };
 
+          const homeButton = document.getElementById("homeButton");
+          homeButton.addEventListener("click", () => {
+            // Arahkan kembali ke halaman home, misalnya index.html
+            window.location.href = "homepage.html";
+          });
           const mbtiResultText = result["E/I"] + result["S/N"] + result["T/F"] + result["J/P"];
           const mbtiDescriptions = {
             ISTJ: "ISTJ: Si Tanggung Jawab - Tipe yang disiplin, teratur, dan sangat bisa diandalkan...",
@@ -120,13 +123,20 @@ fetch('data.json')
 
           mbtiResult.textContent = `Hasil MBTI Anda: ${mbtiResultText}`;
           mbtiDescription.textContent = mbtiDescriptions[mbtiResultText] || "Deskripsi tidak ditemukan.";
-
+          
           resultContainer.style.display = "block";
           questionsContainer.style.display = "none";
+          nextButton.style.display = "none";
+          document.getElementById('info-sidebar').style.display = "none";
+          document.getElementById('info-timer').style.display = "none";
+          homeButton.style.display = "inline-block"; // <--- tampilkan tombol "Kembali ke Home"
+          
+          
         }
       } else {
         alert("Pilih salah satu jawaban terlebih dahulu.");
       }
+      
     });
 
     displayQuestion(currentQuestionIndex);

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Personality Test</title>
+        <link href="/belajar bootstrap dasar/bootstrap/bootstrap-5.3.5-dist/css/bootstrap.css" rel="stylesheet">
+        <style>
+          body {
+            background: linear-gradient(135deg, #a2d4f5, #ffc8d0); /* biru ke pink */
+          }
+
+          .sidebar {
+            width: 15%;
+            background-color: #fff4f4;
+            box-sizing: border-box;
+          }
+
+          .main-wrapper {
+            margin-left: 260px; /* Beri ruang untuk sidebar */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            
+          }
+
+          .content-box {
+            align-items: center;
+            justify-content: center;
+          }
+
+          .container {
+            flex-direction: column;
+            justify-content: center;
+            width: 300px;
+            height: 500px;
+            
+          }
+
+          .container button {
+            cursor: pointer;
+            font-weight: bold;
+          }
+
+          a{
+            text-decoration: none;
+          }
+
+          .container button:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+          }
+
+          .text-section {
+            max-width: 300px;
+            line-height: 1.8;
+          }
+        </style>
+      </head>
+      
+
+    <body>
+        <div class="sidebar p-4 ml-0 mt-0 border-end border-secondary border-5 h-100 shadow position-fixed">
+          <h3 class="text-brown text-center fs-4 p-3 border-bottom border-secondary border-2">Tentang Kami</h3>
+          <p class="p-2 border-bottom border-secondary border-2">Kami adalah tim pengembang yang membuat tes kepribadian berbasis waktu
+            untuk membantu Anda mengenali diri lebih baik.</p>
+          <p>Alya Aziza Bashirah</p>
+          <p>Luna Shofa Azzura</p>
+        </div>
+      
+        <div class="main-wrapper p-5 d-flex gap-5 min-vh-100" >
+          <strong class="text-brown text-center fs-1">PERSONALITY TEST BERBASIS WAKTU</strong>
+          <div class="content-box d-flex gap-5">
+            <div class="container bg-gradient px-5 d-flex gap-4 rounded-4 shadow-lg">
+              <button class="bg-light text-white fs-4 py-2 border border-0 rounded-5">START</button>
+              <button class="bg-light text-white fs-4 py-2 border border-0 rounded-5"><a href="/personality test/projectTugas6.kelompok/gender.html">GENDER</a></button>
+              <p class="fs-8">*Optional. Ini akan menentukan background saat menjawab pertanyaan</p>
+            </div>
+            <div class="text-section">
+              <strong class="text-brown fs-3">Lakukan Personality Test kami untuk menemukan jati diri Anda yang sebenarnya.</strong>
+              <p class="text-brown fs-5">
+                Dapatkan informasi tentang siapa Anda sebenarnya dalam hitungan menit
+                dengan mengikuti tes 16 kepribadian kami yang gratis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </body>
+</html>

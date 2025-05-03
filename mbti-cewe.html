@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Test</title>
+    <link href="/belajar bootstrap dasar/bootstrap/bootstrap-5.3.5-dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        background: linear-gradient(to right, #f9dce7, #fddde6, #f8bad1);
+      }
+
+      #info-sidebar {
+        background-color: #fff0f5; 
+        color: #8b1e3f; 
+        box-sizing: border-box;
+      }
+
+      .circle {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+      }
+
+      .circle.sangat-setuju {
+        background-color: #f8bbd0;
+      }
+      .circle.setuju {
+        background-color: #f48fb1;
+      }
+      .circle.netral {
+        background-color: #f3e5f5;
+      }
+      .circle.tidak-setuju {
+        background-color: #ce93d8;
+      }
+      .circle.sangat-tidak-setuju {
+        background-color: #ab47bc;
+      }
+
+      #info-timer {
+        background-color: #fff0f5;
+        color: #8b1e3f; 
+        box-sizing: border-box;
+      }
+
+      .main-container {
+        box-sizing: border-box;
+      }
+
+      #questionContainer {
+        background-color: #fff0f5;
+        border: 2px solid #f8c8dc;
+        max-width: 900px;
+      }
+
+      .question-text {
+        font-size: 25px;
+        font-weight: bold;
+        color: #5C1A00;
+        margin-bottom: 30px;
+      }
+
+      .option-button {
+        margin: 30px;
+        padding: 12px 25px;
+        font-size: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #5C1A00;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      .option-button.sangat-setuju {
+        width: 100px;
+        height: 100px;
+        background-color: #f8bbd0;
+        border-color: #ec407a;
+      }
+
+      .option-button.sangat-setuju:hover {
+        transform: scale(1.05);
+        background-color:wheat;
+      }
+
+      .option-button.setuju {
+        width: 70px;
+        height: 70px;
+        background-color: #f48fb1;
+        border-color: #e91e63;
+      }
+
+      .option-button.setuju:hover {
+        transform: scale(1.05);
+        background-color:wheat;
+      }
+
+      .option-button.netral {
+        width: 30px;
+        height: 50px;
+        background-color: #f3e5f5;
+        border-color: #ba68c8;
+      }
+
+      .option-button.netral:hover {
+        transform: scale(1.05);
+        background-color:wheat;
+      }
+
+      .option-button.tidak-setuju {
+        width: 70px;
+        height: 70px;
+        background-color: #ce93d8;
+        border-color: #8e24aa;
+      }
+
+      .option-button.tidak-setuju:hover {
+        transform: scale(1.05);
+        background-color:wheat;
+      }
+
+      .option-button.sangat-tidak-setuju {
+        width: 100px;
+        height: 100px;
+        background-color: #ab47bc;
+        border-color: #6a1b9a;
+      }
+
+      .option-button.sangat-tidak-setuju:hover {
+        transform: scale(1.05);
+        background-color:wheat;
+      }
+
+      .option-button.selected {
+        box-shadow: 0 0 0 4px rgba(255, 192, 203, 0.6);
+      }
+
+      #nextButton {
+        background-color: #f06292;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      #nextButton:hover {
+        background-color: #ec407a;
+      }
+
+      #resultContainer {
+        background-color: #fff0f5;
+        border: 2px solid #f8c8dc;
+        margin: 40px auto;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      #mbtiDescription {
+        color: #333;
+      }
+
+      #homeButton {  
+        background-color: #f06292;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      #homeButton:hover {
+        background-color: #ec407a;
+      }
+    </style>
+  </head>
+  <body >
+    <div class="d-flex  align-items-start gap-3 px-4 mt-5">
+      <div id="info-sidebar" class="w-auto rounded-4 p-3 shadow">
+        <div class="info-title fs-2 fw-medium mb-3 text-center">Keterangan</div>
+        <p>Silahkan pilih salah satu</p>
+        <div class="info-item mb-2 fw-medium"><span class="circle sangat-setuju rounded-circle"></span> SANGAT SETUJU</div>
+        <div class="info-item mb-2 fw-medium"><span class="circle setuju rounded-circle"></span> SETUJU</div>
+        <div class="info-item mb-2 fw-medium"><span class="circle netral rounded-circle"></span> NETRAL</div>
+        <div class="info-item mb-2 fw-medium"><span class="circle tidak-setuju rounded-circle"></span> TIDAK SETUJU</div>
+        <div class="info-item fw-medium"><span class="circle sangat-tidak-setuju rounded-circle"></span> SANGAT TIDAK SETUJU</div>
+      </div>
+    
+      <div id="info-timer" class="w-auto rounded-4 shadow p-3">
+        <p class="fs-2 fw-medium text-center">Timer</p>
+        <p class="mb-2 fw-medium fs-4">(waktunya disini)</p>
+      </div>
+      
+    </div>    
+
+    <div class="main-container d-flex flex-column align-items-center p-4" style="margin-top: -50px;">
+      <div id="questionContainer" class="rounded-4 p-5 w-100 text-center shadow"></div>
+      <button id="nextButton" class="mx-auto mt-5 px-5 py-2 fs-4 fw-bold border-0 rounded-5">Selanjutnya</button>
+      <button id="homeButton" style="display: none;" class="mt-5 px-4 py-2 fs-4 fw-bold border-0 rounded-5">Kembali ke Home</button>
+    </div>
+    
+    <div id="resultContainer" style="display: none;" class="rounded-4 p-5 mt-4 text-center shadow">
+        <p id="mbtiResult" class="fs-3 fw-bold mb-4"></p>
+        <p id="mbtiDescription" class="fs-5"></p>
+    </div>
+  
+    <script src="mbti.js"></script>
+  </body>
+</html>

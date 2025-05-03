@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Test</title>
+    <link href="/belajar bootstrap dasar/bootstrap/bootstrap-5.3.5-dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+    body {
+  background: linear-gradient(to right, #a0e1f7, #f8a2b5); /* biru ke pink soft */
+}
+
+.content-box {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  font-size: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+}
+
+.content-box button{
+  cursor: pointer;
+}
+.container-cewe button:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  background-color: pink;
+}
+.container-cowo button:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  background-color: paleturquoise;
+}
+a{
+  text-decoration: none;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="content-box d-flex mx-1 gap-5 vh-100 w-100">
+      <div class="container-cowo">
+        <button class="container rounded-circle shadow-lg border-0">👨</button>
+      </div>
+      <div class="container-cewe">
+        <button class="container rounded-circle shadow-lg border-0"><a href="/personality test/projectTugas6.kelompok/mbti-cewe.html">👩</a></button>
+      </div>
+    </div>
+</body>
+</html>
