@@ -7,11 +7,11 @@
     <link href="/belajar bootstrap dasar/bootstrap/bootstrap-5.3.5-dist/css/bootstrap.css" rel="stylesheet">
     <style>
       body {
-        background: linear-gradient(to right, #f9dce7, #fddde6, #f8bad1);
+        background: linear-gradient(135deg, #d1e8ff, #ffe3f0);
       }
 
       #info-sidebar {
-        background-color: #fff0f5; 
+        background-color: #f8f8f8; 
         color: #8b1e3f; 
         box-sizing: border-box;
       }
@@ -24,23 +24,23 @@
       }
 
       .circle.sangat-setuju {
-        background-color: #f8bbd0;
+        background-color: #e3f2fd;
       }
       .circle.setuju {
-        background-color: #f48fb1;
+        background-color: #c5cae9;
       }
       .circle.netral {
-        background-color: #f3e5f5;
+        background-color: #f0b3d8;
       }
       .circle.tidak-setuju {
-        background-color: #ce93d8;
+        background-color: #fce4ec;
       }
       .circle.sangat-tidak-setuju {
-        background-color: #ab47bc;
+        background-color:  #b3e0f0;
       }
 
       #info-timer {
-        background-color: #fff0f5;
+        background-color: #f8f8f8;
         color: #8b1e3f; 
         box-sizing: border-box;
       }
@@ -50,7 +50,7 @@
       }
 
       #questionContainer {
-        background-color: #fff0f5;
+        background-color: #f8f8f8;
         border: 2px solid #f8c8dc;
         max-width: 900px;
       }
@@ -75,7 +75,7 @@
       .option-button.sangat-setuju {
         width: 100px;
         height: 100px;
-        background-color: #f8bbd0;
+        background-color: #e3f2fd;
         border-color: #ec407a;
       }
 
@@ -87,7 +87,7 @@
       .option-button.setuju {
         width: 70px;
         height: 70px;
-        background-color: #f48fb1;
+        background-color: #c5cae9;
         border-color: #e91e63;
       }
 
@@ -99,7 +99,7 @@
       .option-button.netral {
         width: 30px;
         height: 50px;
-        background-color: #f3e5f5;
+        background-color: #f0b3d8;
         border-color: #ba68c8;
       }
 
@@ -111,7 +111,7 @@
       .option-button.tidak-setuju {
         width: 70px;
         height: 70px;
-        background-color: #ce93d8;
+        background-color: #fce4ec;
         border-color: #8e24aa;
       }
 
@@ -123,7 +123,7 @@
       .option-button.sangat-tidak-setuju {
         width: 100px;
         height: 100px;
-        background-color: #ab47bc;
+        background-color: #b3e0f0;
         border-color: #6a1b9a;
       }
 
@@ -137,7 +137,7 @@
       }
 
       #nextButton {
-        background-color: #f06292;
+        background-color: #f48fb1;
         color: white;
         cursor: pointer;
         transition: background 0.3s ease;
@@ -148,7 +148,7 @@
       }
 
       #resultContainer {
-        background-color: #fff0f5;
+        background-color: #ffffff;
         border: 2px solid #f8c8dc;
         margin: 40px auto;
         width: 80%;
@@ -160,7 +160,7 @@
       }
 
       #homeButton {  
-        background-color: #f06292;
+        background-color: #f48fb1;
         color: white;
         cursor: pointer;
         transition: background 0.3s ease;
@@ -171,7 +171,7 @@
       }
 
       #homeButton1 {  
-        background-color: #f06292;
+        background-color: #f48fb1;
         color: white;
         cursor: pointer;
         transition: background 0.3s ease;
@@ -185,7 +185,6 @@
         text-decoration: none;
         color: white;
       }
-
     </style>
   </head>
   <body >
@@ -210,7 +209,7 @@
 
     <div class="main-container d-flex flex-column align-items-center p-4" style="margin-top: -50px;">
       <div id="questionContainer" class="rounded-4 p-5 w-100 text-center shadow"></div>
-      <button id="nextButton" class="mx-auto mt-5 px-5 py-2 fs-4 fw-bold border-0 rounded-5">Selanjutnya</button>
+      <button id="nextButton" class="mx-auto mt-5 vh-auto px-5 py-2 fs-4 fw-bold border-0 rounded-5">Selanjutnya</button>
       <button id="homeButton" style="display: none;" class="mt-5 px-4 py-2 fs-4 fw-bold border-0 rounded-5">Kembali ke Home</button>
     </div>
     
