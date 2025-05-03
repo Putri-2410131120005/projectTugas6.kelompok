@@ -13,7 +13,132 @@
       "dimension": "Introvert",
       "positive": "Introvert",
       "negative": "Extrovert"
+    },
+    {
+      "question": "3. Saya merasa lebih mudah beradaptasi dalam situasi sosial baru dan bertemu orang baru.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Extrovert",
+      "positive": "Extrovert",
+      "negative": "Introvert"
+    },
+    {
+      "question": "4. Saya merasa nyaman berbicara dengan orang asing dan memperkenalkan diri dalam situasi baru.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Extrovert",
+      "positive": "Extrovert",
+      "negative": "Introvert"
+    },
+    {
+      "question": "5. Saya lebih suka berpikir dan merencanakan sesuatu sendirian sebelum berbicara dengan orang lain.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Introvert",
+      "positive": "Introvert",
+      "negative": "Extrovert"
+    },
+    {
+      "question": "6. Saya lebih percaya pada informasi konkret yang bisa saya lihat dan rasakan langsung.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Sensing",
+      "positive": "Sensing",
+      "negative": "Intuition"
+    },
+    {
+      "question": "7. Saya sering memikirkan kemungkinan dan ide-ide besar daripada fokus pada kenyataan saat ini.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Intuition",
+      "positive": "Intuition",
+      "negative": "Sensing"
+    },
+    {
+      "question": "8. Saya lebih suka mengikuti instruksi dan prosedur yang sudah terbukti berhasil.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Sensing",
+      "positive": "Sensing",
+      "negative": "Intuition"
+    },
+    {
+      "question": "9. Saya lebih tertarik pada makna tersembunyi dan pola di balik suatu peristiwa.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Intuition",
+      "positive": "Intuition",
+      "negative": "Sensing"
+    },
+    {
+      "question": "10. Saya merasa lebih nyaman dengan fakta dan detail daripada teori dan spekulasi.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Sensing",
+      "positive": "Sensing",
+      "negative": "Intuition"
+    },
+    {
+      "question": "11. Saya lebih memilih membuat keputusan berdasarkan logika dan analisis daripada mempertimbangkan perasaan orang lain.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Thinking",
+      "positive": "Thinking",
+      "negative": "Feeling"
+    },
+    {
+      "question": "12. Saya merasa lebih nyaman menyampaikan kebenaran meskipun itu bisa menyakitkan perasaan orang lain.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Thinking",
+      "positive": "Thinking",
+      "negative": "Feeling"
+    },
+    {
+      "question": "13. Saya sering mempertimbangkan dampak emosional keputusan saya terhadap orang lain sebelum mengambil tindakan.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Feeling",
+      "positive": "Feeling",
+      "negative": "Thinking"
+    },
+    {
+      "question": "14. Dalam bekerja, saya lebih menghargai keadilan dan objektivitas daripada keharmonisan dan perasaan.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Thinking",
+      "positive": "Thinking",
+      "negative": "Feeling"
+    },
+    {
+      "question": "15. Saya cenderung membuat keputusan dengan hati daripada dengan kepala.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Feeling",
+      "positive": "Feeling",
+      "negative": "Thinking"
+    },
+    {
+      "question": "16. Saya merasa lebih tenang ketika semua hal direncanakan dan terjadwal dengan rapi.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Judging",
+      "positive": "Judging",
+      "negative": "Perceiving"
+    },
+    {
+      "question": "17. Saya sering membiarkan rencana berkembang secara alami daripada menetapkan keputusan sejak awal.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Perceiving",
+      "positive": "Perceiving",
+      "negative": "Judging"
+    },
+    {
+      "question": "18. Saya cenderung menyelesaikan tugas jauh sebelum batas waktu yang ditentukan.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Judging",
+      "positive": "Judging",
+      "negative": "Perceiving"
+    },
+    {
+      "question": "19. Saya lebih nyaman beradaptasi dengan perubahan daripada mengikuti jadwal tetap.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Perceiving",
+      "positive": "Perceiving",
+      "negative": "Judging"
+    },
+    {
+      "question": "20. Saya lebih suka keputusan yang final daripada menunda-nunda dan mengeksplorasi kemungkinan lain.",
+      "pilihan": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"],
+      "dimension": "Judging",
+      "positive": "Judging",
+      "negative": "Perceiving"
     }
-    
   ]
 }
