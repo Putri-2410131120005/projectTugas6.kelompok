@@ -17,5 +17,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     const timerInterval = setInterval(updateTimer, 1000);
-    updateTimer(); // Panggil sekali untuk menampilkan waktu awal
+    updateTimer();
 });

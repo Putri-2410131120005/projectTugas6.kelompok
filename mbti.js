@@ -22,12 +22,13 @@ fetch('data.json')
 
     let currentQuestionIndex = 0;
 
+
     const questionsContainer = document.getElementById('questionContainer');
     const nextButton = document.getElementById('nextButton');
     const resultContainer = document.getElementById('resultContainer');
     const mbtiResult = document.getElementById('mbtiResult');
     const mbtiDescription = document.getElementById('mbtiDescription');
-
+    
     function displayQuestion(index) {
       const question = data.Pernyataan[index];
       questionsContainer.innerHTML = ""; // Bersihkan kontainer
@@ -138,7 +139,7 @@ fetch('data.json')
       }
       
     });
-
+    
     displayQuestion(currentQuestionIndex);
   })
   .catch(error => console.error('Gagal memuat data JSON:', error));

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personality Test</title>
-    <link href="/belajar bootstrap dasar/bootstrap/bootstrap-5.3.5-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/PEM. WEB 1/personality test/projectTugas6.kelompok/belajar bootstrap dasar/bootstrap/bootstrap-5.3.5-dist/css/bootstrap.css" rel="stylesheet">
     <style>
       body {
-        background: radial-gradient(circle, #64b5f6, #ffffff); /* Biru muda di tengah memancar ke putih */
+        background: radial-gradient(circle, #64b5f6, #ffffff);
         
       }
 
@@ -173,7 +173,7 @@
       }
 
       #homeButton1 {  
-        background-color: white;
+        background-color: gainsboro;
         border: 1px solid #42a5f5;
         color: #42a5f5;
         cursor: pointer;
@@ -187,13 +187,22 @@
       a{
         text-decoration: none;
       }
+
+      #timerContainer {
+        background-color: #42a5f5;
+        color: #333;
+      }
+
     </style>
   </head>
   <body >
     <div class="d-flex  align-items-start gap-3 px-4 mt-5">
       <div id="info-sidebar" class="w-auto rounded-4 p-3 shadow">
-        <div class="info-title fs-2 fw-medium mb-3 text-center">Keterangan</div>
-        <p>Silahkan pilih salah satu</p>
+        <div class="info-title fs-2 fw-medium mb-3 text-center">Petunjuk</div>
+        <ul>
+          <li>Waktu mengerjakan 10 menit</li>
+          <li>Keterangan pilihan warna</li>
+        </ul>
         <div class="info-item mb-2 fw-medium"><span class="circle sangat-setuju rounded-circle"></span> SANGAT SETUJU</div>
         <div class="info-item mb-2 fw-medium"><span class="circle setuju rounded-circle"></span> SETUJU</div>
         <div class="info-item mb-2 fw-medium"><span class="circle netral rounded-circle"></span> NETRAL</div>
@@ -204,7 +213,7 @@
     
       <div id="info-timer" class="w-auto rounded-4 shadow p-3">
         <p class="fs-2 fw-medium text-center">Timer</p>
-        <p class="mb-2 fw-medium fs-4">(waktunya disini)</p>
+        <div id="timerContainer" class="rounded-5 py-2 px-4 fs-3 fw-bold m-2"></div>
       </div>
       
     </div>    
@@ -221,5 +230,6 @@
     </div>
   
     <script src="mbti.js"></script>
+    <script src="timer.js"></script>
   </body>
 </html>
