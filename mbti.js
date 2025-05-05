@@ -144,6 +144,9 @@ fetch('data.json')
           containerHasil.style.display = "block";
           containerPertanyaan.style.display = "none";
           tombolSelanjutnya.style.display = "none";
+          document.getElementById('info-timer').style.display= "none";
+          document.getElementById('info-sidebar').style.display= "none";
+          document.getElementById('homeButton').style.display= "inline-block";
         }
       } else {
         alert("Pilih salah satu jawaban terlebih dahulu.");

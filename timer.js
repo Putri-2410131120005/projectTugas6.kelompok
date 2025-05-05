@@ -1,7 +1,7 @@
 // Timer countdown script
 document.addEventListener("DOMContentLoaded", function () {
     const timerContainer = document.getElementById("timerContainer");
-    let timeLeft = 600; // Waktu dalam detik (10 menit = 600 detik)
+    let timeLeft = 600; //  
   
     function updateTimer() {
       const minutes = Math.floor(timeLeft / 60);
