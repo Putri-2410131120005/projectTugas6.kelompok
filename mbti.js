@@ -20,90 +20,106 @@ fetch('data.json')
       "Perceiving": 0
     };
 
-    let currentQuestionIndex = 0;
+    let nomorPertanyaan = 0;
 
+    const containerPertanyaan = document.getElementById('questionContainer');
+    const tombolSelanjutnya = document.getElementById('nextButton');
+    const containerHasil = document.getElementById('resultContainer');
+    const hasilMBTI = document.getElementById('mbtiResult');
+    const deskripsiMBTI = document.getElementById('mbtiDescription');
 
-    const questionsContainer = document.getElementById('questionContainer');
-    const nextButton = document.getElementById('nextButton');
-    const resultContainer = document.getElementById('resultContainer');
-    const mbtiResult = document.getElementById('mbtiResult');
-    const mbtiDescription = document.getElementById('mbtiDescription');
-    
-    function displayQuestion(index) {
-      const question = data.Pernyataan[index];
-      questionsContainer.innerHTML = ""; // Bersihkan kontainer
+    function tampilkanPertanyaan(index) {
+      const pertanyaan = data.Pernyataan[index];
+      containerPertanyaan.innerHTML = "";
 
-      const questionText = document.createElement('p');
-      questionText.className = 'question-text';
-      questionText.textContent = question.question;
-      questionsContainer.appendChild(questionText);
+      const teksPertanyaan = document.createElement('p');
+      teksPertanyaan.className = 'question-text';
+      teksPertanyaan.textContent = pertanyaan.question;
+      containerPertanyaan.appendChild(teksPertanyaan);
 
-      question.pilihan.forEach(option => {
+      pertanyaan.pilihan.forEach(option => {
         const button = document.createElement('button');
-        
-        // Jangan tampilkan teks
-        // button.textContent = option;
-
-        // Tambahkan class warna
         button.className = `option-button ${option.toLowerCase().replace(/\s+/g, "-")}`;
-
-        // Tetap gunakan dataset untuk logika pemrosesan
         button.dataset.question = `question_${index}`;
         button.dataset.value = option;
-
-        // Tambahkan tooltip untuk info saat hover
         button.title = option;
 
-        // Event klik
         button.addEventListener('click', () => {
           document.querySelectorAll(`button[data-question="question_${index}"]`)
             .forEach(btn => btn.classList.remove('selected'));
           button.classList.add('selected');
         });
 
-        questionsContainer.appendChild(button);
+        containerPertanyaan.appendChild(button);
       });
     }
-    
-    nextButton.addEventListener('click', function(event) {
+
+    tombolSelanjutnya.addEventListener('click', function(event) {
       event.preventDefault();
 
-      const selectedOption = document.querySelector(`button[data-question="question_${currentQuestionIndex}"].selected`);
-      if (selectedOption) {
-        const score = values[selectedOption.dataset.value];
-        const question = data.Pernyataan[currentQuestionIndex];
+      const opsiYangDipilih = document.querySelector(`button[data-question="question_${nomorPertanyaan}"].selected`);
+      if (opsiYangDipilih) {
+        const nilai = nilaiPilihan[opsiYangDipilih.dataset.value];
+        const pertanyaan = data.Pernyataan[nomorPertanyaan];
 
-        if (question.positive === "Extrovert") scores["Extrovert"] += score;
-        if (question.negative === "Extrovert") scores["Introvert"] += score;
+        // untuk menambah nilai ke skor
+        if (pertanyaan.positive === "Extrovert") {
+          skor["Extrovert"] += nilai;
+        } else if (pertanyaan.negative === "Extrovert") {
+          skor["Introvert"] += nilai;
+        }
 
-        if (question.positive === "Sensing") scores["Sensing"] += score;
-        if (question.negative === "Sensing") scores["Intuition"] += score;
+        if (pertanyaan.positive === "Sensing") {
+          skor["Sensing"] += nilai;
+        } else if (pertanyaan.negative === "Sensing") {
+          skor["Intuition"] += nilai;
+        }
 
-        if (question.positive === "Thinking") scores["Thinking"] += score;
-        if (question.negative === "Thinking") scores["Feeling"] += score;
+        if (pertanyaan.positive === "Thinking") {
+          skor["Thinking"] += nilai;
+        } else if (pertanyaan.negative === "Thinking") {
+          skor["Feeling"] += nilai;
+        }
 
-        if (question.positive === "Judging") scores["Judging"] += score;
-        if (question.negative === "Judging") scores["Perceiving"] += score;
+        if (pertanyaan.positive === "Judging") {
+          skor["Judging"] += nilai;
+        } else if (pertanyaan.negative === "Judging") {
+          skor["Perceiving"] += nilai;
+        }
 
-        currentQuestionIndex++;
+        nomorPertanyaan++;
 
-        if (currentQuestionIndex < data.Pernyataan.length) {
-          displayQuestion(currentQuestionIndex);
+        if (nomorPertanyaan < data.Pernyataan.length) {
+          tampilkanPertanyaan(nomorPertanyaan);
         } else {
-          const result = {
-            "E/I": scores["Extrovert"] > scores["Introvert"] ? "E" : "I",
-            "S/N": scores["Sensing"] > scores["Intuition"] ? "S" : "N",
-            "T/F": scores["Thinking"] > scores["Feeling"] ? "T" : "F",
-            "J/P": scores["Judging"] > scores["Perceiving"] ? "J" : "P"
-          };
+          let hasil = "";
 
-          const homeButton = document.getElementById("homeButton");
-          homeButton.addEventListener("click", () => {
-            // Arahkan kembali ke halaman home, misalnya index.html
-            window.location.href = "homepage.html";
-          });
-          const mbtiResultText = result["E/I"] + result["S/N"] + result["T/F"] + result["J/P"];
-          const mbtiDescriptions = {
+          if (skor["Extrovert"] > skor["Introvert"]) {
+            hasil += "E";
+          } else {
+            hasil += "I";
+          }
+
+          if (skor["Sensing"] > skor["Intuition"]) {
+            hasil += "S";
+          } else {
+            hasil += "N";
+          }
+
+          if (skor["Thinking"] > skor["Feeling"]) {
+            hasil += "T";
+          } else {
+            hasil += "F";
+          }
+
+          if (skor["Judging"] > skor["Perceiving"]) {
+            hasil += "J";
+          } else {
+            hasil += "P";
+          }
+
+          const hasilMBTIString = hasil;
+          const deskripsi = {
             ISTJ: "ISTJ: Si Tanggung Jawab - Tipe yang disiplin, teratur, dan sangat bisa diandalkan. Suka rutinitas, mematuhi aturan, dan bekerja dengan teliti.",
             ISFJ: "ISFJ: Si Penjaga - Setia, sabar, dan suka membantu. Mereka perhatian pada kebutuhan orang lain dan sering bekerja di belakang layar.",
             INFJ: "INFJ: Si Visioner - Pendiam tapi punya idealisme kuat. Sangat peduli pada makna hidup dan suka membantu orang lain dengan cara yang mendalam.",
@@ -122,24 +138,18 @@ fetch('data.json')
             INTP: "INTP: si Pemikir Logis - Suka menganalisis, penasaran, dan sering memikirkan ide-ide kompleks. Lebih suka konsep daripada emosi."
           };
 
-          mbtiResult.textContent = `Hasil MBTI Anda: ${mbtiResultText}`;
-          mbtiDescription.textContent = mbtiDescriptions[mbtiResultText] || "Deskripsi tidak ditemukan.";
-          
-          resultContainer.style.display = "block";
-          questionsContainer.style.display = "none";
-          nextButton.style.display = "none";
-          document.getElementById('info-sidebar').style.display = "none";
-          document.getElementById('info-timer').style.display = "none";
-          homeButton.style.display = "inline-block"; // <--- tampilkan tombol "Kembali ke Home"
-          
-          
+          hasilMBTI.textContent = `Hasil MBTI Anda: ${hasilMBTIString}`;
+          deskripsiMBTI.textContent = deskripsi[hasilMBTIString] || "Deskripsi tidak ditemukan.";
+
+          containerHasil.style.display = "block";
+          containerPertanyaan.style.display = "none";
+          tombolSelanjutnya.style.display = "none";
         }
       } else {
         alert("Pilih salah satu jawaban terlebih dahulu.");
       }
-      
     });
-    
-    displayQuestion(currentQuestionIndex);
+
+    tampilkanPertanyaan(nomorPertanyaan);
   })
   .catch(error => console.error('Gagal memuat data JSON:', error));
