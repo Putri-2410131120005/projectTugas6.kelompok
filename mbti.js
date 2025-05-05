@@ -1,7 +1,7 @@
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    const values = {
+    const nilaiPilihan = {
       "Sangat Setuju": 5,
       "Setuju": 4,
       "Netral": 3,
@@ -9,7 +9,7 @@ fetch('data.json')
       "Sangat Tidak Setuju": 1
     };
 
-    const scores = {
+    const skor = {
       "Extrovert": 0,
       "Introvert": 0,
       "Sensing": 0,
